@@ -4,14 +4,21 @@ HOMEPAGE = "http://www.jumpnowtek.com"
 IMAGE_FEATURES += "package-management"
 IMAGE_LINGUAS = "en-us"
 
-require /mnt/1f0ab4b3-c472-49e1-92d8-c0b5664f7fdb/ProjectsForFun/Pool/yocto/sources/meta-rpi/images/qt5-image.bb
-
+require ../meta-rpi/images/qt5-image.bb
+	
 # Add vfstpd, openssh-server
 
 
 IMAGE_INSTALL += " \
-    billiardsfe \
+    billiards-common \
+    billiards-config \
+    billiards-graphics \
+    billiards-layouts \
+    billiards-shots \
+    billiards-projection \
 "
+
+
 
 IMAGE_FILE_BLACKLIST += " \
     /etc/init.d/hwclock.sh \
