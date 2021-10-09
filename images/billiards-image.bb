@@ -5,8 +5,6 @@ IMAGE_FEATURES += "package-management"
 IMAGE_LINGUAS = "en-us"
 
 require ../meta-rpi/images/qt5-image.bb
-	
-# Add vfstpd, openssh-server
 
 
 IMAGE_INSTALL += " \
@@ -16,6 +14,10 @@ IMAGE_INSTALL += " \
     billiards-layouts \
     billiards-shots \
     billiards-projection \
+    monkey \
+    dhcp-server \
+    iptables \
+    wpa-supplicant \
 "
 
 

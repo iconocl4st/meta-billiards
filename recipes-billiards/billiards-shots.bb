@@ -12,5 +12,5 @@ PV = "1.0+git${SRCPV}"
 
 inherit cmake
 
-DEPENDS = "billiards-common boost"
+DEPENDS = "billiards-common boost libeigen"
 FILES_${PN} += "/app /app/shots_api"
