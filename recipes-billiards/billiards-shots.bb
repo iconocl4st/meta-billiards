@@ -10,7 +10,13 @@ S = "${WORKDIR}/git"
 SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
 
-inherit cmake
+inherit cmake systemd
+
+do_install() {
+	cmake_do_install
+	install -D -p -m0644 ${WORKDIR}/git/shots_api.service ${D}${systemd_unitdir}/system/shots_api.service
+}
 
 DEPENDS = "billiards-common boost libeigen gmp"
 FILES_${PN} += "/app /app/shots_api"
+SYSTEMD_SERVICE_${PN} = "shots_api.service"
