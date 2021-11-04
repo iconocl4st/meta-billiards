@@ -17,7 +17,9 @@ IMAGE_INSTALL += " \
     monkey \
     dhcp-server \
     iptables \
+    iw \
     wpa-supplicant \
+    mongodb \
 "
 
 
